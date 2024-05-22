@@ -11,13 +11,6 @@ base_dir = os.path.dirname(os.path.abspath(__file__))
 # Construct the relative path to the 'styles/main.txt' file
 file_path = os.path.join(base_dir, 'styles', 'main.css')
 
-# Check if the file exists before attempting to open it
-if os.path.exists(file_path):
-    with open(file_path) as f:
-        # Read and process the file
-        file_content = f.read()
-else:
-    raise FileNotFoundError(f"File not found: {file_path}")
 
 # --- PATH SETTINGS ---
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
@@ -52,7 +45,7 @@ PROJECTS = {
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
 
 # --- LOAD CSS, PDF & PROFIL PIC ---
-with open("C:\\Users\\Nisha Preetha M\\DIgital_CV\\styles\\main.css") as f:
+with open("C:\Users\Nisha Preetha M\DIgital_CV\styles\main.css") as f:
     st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 with open("C:\\Users\\Nisha Preetha M\\DIgital_CV\\assets\\CV.pdf", "rb") as pdf_file:
     PDFbyte = pdf_file.read()
