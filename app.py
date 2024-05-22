@@ -45,7 +45,8 @@ PROJECTS = {
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
 
 # --- LOAD CSS, PDF & PROFIL PIC ---
-
+with open("C:\\Users\\Nisha Preetha M\\DIgital_CV\\styles\\main.css") as f:
+    st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 with open("C:\\Users\\Nisha Preetha M\\DIgital_CV\\assets\\CV.pdf", "rb") as pdf_file:
     PDFbyte = pdf_file.read()
 profile_pic = Image.open("C:\\Users\\Nisha Preetha M\\DIgital_CV\\assets\\profile-img.jpg")
