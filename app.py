@@ -3,14 +3,6 @@ from pathlib import Path
 import streamlit as st
 from PIL import Image
 
-import os
-
-# Get the directory of the current script
-base_dir = os.path.dirname(os.path.abspath(__file__))
-
-# Construct the relative path to the 'styles/main.txt' file
-file_path = os.path.join(base_dir, 'styles', 'main.css')
-
 
 # --- PATH SETTINGS ---
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
