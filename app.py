@@ -1,7 +1,7 @@
 from pathlib import Path
+import io
 import requests
 from PyPDF2 import PdfReader
-import io
 import streamlit as st
 
 # Set Streamlit page configuration at the very beginning
@@ -45,7 +45,9 @@ if is_pdf_valid(local_file_path):
             pdf_text = ""
             for page_num in range(len(reader.pages)):
                 page = reader.pages[page_num]
-                pdf_text += page.extract_text() + "\n"
+                text = page.extract_text()
+                if text:
+                    pdf_text += text + "\n"
             st.text_area("Extracted PDF Text", pdf_text, height=300)
     except FileNotFoundError:
         st.error(f"File {local_file_path} not found.")
