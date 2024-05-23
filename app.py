@@ -88,7 +88,7 @@ PROJECTS = {
     "🏆 Sentinel-2-Data-Processing-for-Pichavaram-Mangrove-Forest-Using-CNN": "https://github.com/NitheshGoutham/Sentinel-2-Data-Processing-for-Pichavaram-Mangrove-Forest-Using-CNN",
 }
 
-st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
+
 
 # --- LOAD CSS, PDF & PROFIL PIC ---
 with open("downloaded_file.pdf") as f:
