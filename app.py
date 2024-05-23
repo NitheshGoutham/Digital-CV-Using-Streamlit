@@ -13,7 +13,7 @@ resume_file = current_dir / "assets" / "CV.pdf"
 import requests
 from PyPDF2 import PdfReader
 import io
-import streamlit as st
+
 
 # Set Streamlit page configuration at the beginning
 st.set_page_config(page_title="PDF Reader", page_icon="📄")
@@ -62,7 +62,6 @@ except FileNotFoundError:
     st.error(f"File {local_file_path} not found.")
 except Exception as e:
     st.error(f"An error occurred: {e}")
-
 
 
 
