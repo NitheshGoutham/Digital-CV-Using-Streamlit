@@ -31,8 +31,8 @@ def is_pdf_valid(file_path):
     except Exception as e:
         return False
 
-# Google Drive file ID and local path
-file_id = '1o5AbKC9oBTgB2MHX9NsaTXvt6BtmFgX5'
+# Extracted Google Drive file ID from the provided link
+file_id = '1pyC9WtCBh-fgsE6w1LMQWP_K9WUkqHXv'
 local_file_path = 'downloaded_file.pdf'
 
 # Download and validate PDF file
@@ -57,6 +57,7 @@ if is_pdf_valid(local_file_path):
         st.error(f"An error occurred while reading the PDF file: {e}")
 else:
     st.error("The downloaded file is not a valid PDF.")
+
 
 
 # --- PATH SETTINGS ---
