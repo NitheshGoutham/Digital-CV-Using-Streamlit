@@ -24,8 +24,8 @@ response = requests.get(file_url)
 with open(local_file_path, 'wb') as file:
     file.write(response.content)
 
-# Open and read the downloaded file
-with open(local_file_path, 'r') as file:
+# Open and read the downloaded file in binary mode
+with open(local_file_path, 'rb') as file:
     content = file.read()
     print(content)
 
