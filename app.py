@@ -56,6 +56,7 @@ except Exception as e:
 
 
 
+
 # --- GENERAL SETTINGS ---
 PAGE_TITLE = "Digital CV | NG"
 PAGE_ICON = ":wave:"
