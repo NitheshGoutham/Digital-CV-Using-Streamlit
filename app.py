@@ -6,8 +6,9 @@ from PIL import Image
 import requests
 from PyPDF2 import PdfReader
 import io
+import streamlit as st
 
-# Set Streamlit page configuration at the beginning
+# Set Streamlit page configuration at the very beginning
 st.set_page_config(page_title="PDF Reader", page_icon="📄")
 
 def download_file_from_google_drive(file_id, local_path):
@@ -25,6 +26,14 @@ def download_file_from_google_drive(file_id, local_path):
     else:
         raise Exception(f"Failed to download file. Status code: {response.status_code}")
 
+def is_pdf_valid(file_path):
+    try:
+        with open(file_path, 'rb') as file:
+            PdfReader(file)
+        return True
+    except Exception as e:
+        return False
+
 # The Google Drive file ID
 file_id = '1o5AbKC9oBTgB2MHX9NsaTXvt6BtmFgX5'
 
@@ -32,28 +41,37 @@ file_id = '1o5AbKC9oBTgB2MHX9NsaTXvt6BtmFgX5'
 local_file_path = 'downloaded_file.pdf'
 
 # Download the file from Google Drive
-download_file_from_google_drive(file_id, local_file_path)
-
-# Open and read the downloaded file
 try:
-    with open(local_file_path, 'rb') as file:
-        # Read the file content
-        content = file.read()
-        print("File read successfully!")
-        
-        # Use PyPDF2 to read the PDF content
-        pdf_reader = PdfReader(io.BytesIO(content))
-        pdf_text = ""
-        for page_num in range(len(pdf_reader.pages)):
-            page = pdf_reader.pages[page_num]
-            pdf_text += page.extract_text() + "\n"
-
-        # Display the extracted text using Streamlit
-        st.text_area("Extracted PDF Text", pdf_text, height=300)
-except FileNotFoundError:
-    st.error(f"File {local_file_path} not found.")
+    download_file_from_google_drive(file_id, local_file_path)
 except Exception as e:
-    st.error(f"An error occurred: {e}")
+    st.error(f"Failed to download file: {e}")
+    st.stop()
+
+# Check if the downloaded file is a valid PDF
+if is_pdf_valid(local_file_path):
+    # Open and read the downloaded file
+    try:
+        with open(local_file_path, 'rb') as file:
+            # Read the file content
+            content = file.read()
+            print("File read successfully!")
+
+            # Use PyPDF2 to read the PDF content
+            pdf_reader = PdfReader(io.BytesIO(content))
+            pdf_text = ""
+            for page_num in range(len(pdf_reader.pages)):
+                page = pdf_reader.pages[page_num]
+                pdf_text += page.extract_text() + "\n"
+
+            # Display the extracted text using Streamlit
+            st.text_area("Extracted PDF Text", pdf_text, height=300)
+    except FileNotFoundError:
+        st.error(f"File {local_file_path} not found.")
+    except Exception as e:
+        st.error(f"An error occurred while reading the PDF file: {e}")
+else:
+    st.error("The downloaded file is not a valid PDF.")
+
 
 
 # --- PATH SETTINGS ---
