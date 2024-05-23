@@ -14,11 +14,11 @@ import requests
 from PyPDF2 import PdfFileReader
 import io
 
-def download_file_from_google_drive(drive_url, local_path):
-    # Modify the Google Drive URL to the correct format for downloading
-    download_url = drive_url.replace('view?usp=sharing', 'uc?export=download')
+def download_file_from_google_drive(file_id, local_path):
+    # Construct the download URL
+    download_url = f'https://drive.google.com/uc?export=download&id={file_id}'
     
-    # Send a request to the modified URL
+    # Send a request to the URL
     response = requests.get(download_url)
     
     # Check if the request was successful
@@ -29,14 +29,14 @@ def download_file_from_google_drive(drive_url, local_path):
     else:
         raise Exception(f"Failed to download file. Status code: {response.status_code}")
 
-# The Google Drive file URL
-file_url = 'https://drive.google.com/file/d/1o5AbKC9oBTgB2MHX9NsaTXvt6BtmFgX5/view?usp=sharing'
+# The Google Drive file ID
+file_id = '1o5AbKC9oBTgB2MHX9NsaTXvt6BtmFgX5'
 
 # Local file path to save the downloaded file
 local_file_path = 'downloaded_file.pdf'
 
 # Download the file from Google Drive
-download_file_from_google_drive(file_url, local_file_path)
+download_file_from_google_drive(file_id, local_file_path)
 
 # Open and read the downloaded file
 try:
