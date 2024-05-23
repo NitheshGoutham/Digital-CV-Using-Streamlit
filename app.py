@@ -9,6 +9,25 @@ current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 css_file = current_dir / "styles" / "main.css"
 resume_file = current_dir / "assets" / "CV.pdf"
 
+import requests
+
+# The URL of the file on Google Drive
+file_url = 'https://drive.google.com/uc?export=download&id=1o5AbKC9oBTgB2MHX9NsaTXvt6BtmFgX5'
+
+# The local path where the file will be saved
+local_file_path = 'downloaded_file'
+
+# Downloading the file from the URL
+response = requests.get(file_url)
+
+# Save the file locally
+with open(local_file_path, 'wb') as file:
+    file.write(response.content)
+
+# Open and read the downloaded file
+with open(local_file_path, 'r') as file:
+    content = file.read()
+    print(content)
 
 
 # --- GENERAL SETTINGS ---
