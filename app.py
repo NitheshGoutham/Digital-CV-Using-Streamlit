@@ -1,12 +1,8 @@
 from pathlib import Path
-
-import streamlit as st
-from PIL import Image
-
 import requests
 from PyPDF2 import PdfReader
 import io
-
+import streamlit as st
 
 # Set Streamlit page configuration at the very beginning
 st.set_page_config(page_title="PDF Reader", page_icon="📄")
@@ -57,6 +53,8 @@ if is_pdf_valid(local_file_path):
         st.error(f"An error occurred while reading the PDF file: {e}")
 else:
     st.error("The downloaded file is not a valid PDF.")
+
+
 
 
 
