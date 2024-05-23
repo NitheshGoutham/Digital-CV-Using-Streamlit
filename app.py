@@ -9,25 +9,51 @@ current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 css_file = current_dir / "styles" / "main.css"
 resume_file = current_dir / "assets" / "CV.pdf"
 
+
 import requests
+from PyPDF2 import PdfFileReader
+import io
 
-# The URL of the file on Google Drive
-file_url = 'https://drive.google.com/uc?export=download&id=1o5AbKC9oBTgB2MHX9NsaTXvt6BtmFgX5'
+def download_file_from_google_drive(drive_url, local_path):
+    # Modify the Google Drive URL to the correct format for downloading
+    download_url = drive_url.replace('view?usp=sharing', 'uc?export=download')
+    
+    # Send a request to the modified URL
+    response = requests.get(download_url)
+    
+    # Check if the request was successful
+    if response.status_code == 200:
+        # Write the content to a local file
+        with open(local_path, 'wb') as file:
+            file.write(response.content)
+    else:
+        raise Exception(f"Failed to download file. Status code: {response.status_code}")
 
-# The local path where the file will be saved
-local_file_path = 'downloaded_file'
+# The Google Drive file URL
+file_url = 'https://drive.google.com/file/d/1o5AbKC9oBTgB2MHX9NsaTXvt6BtmFgX5/view?usp=sharing'
 
-# Downloading the file from the URL
-response = requests.get(file_url)
+# Local file path to save the downloaded file
+local_file_path = 'downloaded_file.pdf'
 
-# Save the file locally
-with open(local_file_path, 'wb') as file:
-    file.write(response.content)
+# Download the file from Google Drive
+download_file_from_google_drive(file_url, local_file_path)
 
-# Open and read the downloaded file in binary mode
-with open(local_file_path, 'rb') as file:
-    content = file.read()
-    print(content)
+# Open and read the downloaded file
+try:
+    with open(local_file_path, 'rb') as file:
+        content = file.read()
+        print("File read successfully!")
+        
+        # If the file is a PDF, use PyPDF2 to read it
+        pdf_reader = PdfFileReader(io.BytesIO(content))
+        for page_num in range(pdf_reader.getNumPages()):
+            page = pdf_reader.getPage(page_num)
+            print(page.extract_text())
+except FileNotFoundError:
+    print(f"File {local_file_path} not found.")
+except Exception as e:
+    print(f"An error occurred: {e}")
+
 
 
 # --- GENERAL SETTINGS ---
