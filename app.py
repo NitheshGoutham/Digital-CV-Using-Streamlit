@@ -13,6 +13,7 @@ resume_file = current_dir / "assets" / "CV.pdf"
 import requests
 from PyPDF2 import PdfFileReader
 import io
+import streamlit as st
 
 def download_file_from_google_drive(file_id, local_path):
     # Construct the download URL
@@ -41,18 +42,23 @@ download_file_from_google_drive(file_id, local_file_path)
 # Open and read the downloaded file
 try:
     with open(local_file_path, 'rb') as file:
+        # Read the file content
         content = file.read()
         print("File read successfully!")
         
-        # If the file is a PDF, use PyPDF2 to read it
+        # Use PyPDF2 to read the PDF content
         pdf_reader = PdfFileReader(io.BytesIO(content))
+        pdf_text = ""
         for page_num in range(pdf_reader.getNumPages()):
             page = pdf_reader.getPage(page_num)
-            print(page.extract_text())
+            pdf_text += page.extract_text() + "\n"
+
+        # Display the extracted text using Streamlit
+        st.text_area("Extracted PDF Text", pdf_text, height=300)
 except FileNotFoundError:
-    print(f"File {local_file_path} not found.")
+    st.error(f"File {local_file_path} not found.")
 except Exception as e:
-    print(f"An error occurred: {e}")
+    st.error(f"An error occurred: {e}")
 
 
 
