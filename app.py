@@ -20,6 +20,7 @@ NAME = "Nithesh Goutham"
 DESCRIPTION = """
 System Engineer, assisting enterprises by supporting data-driven decision-making.
 """
+PDFbyte = b"%PDF-1.4 example PDF content..."
 EMAIL = "nitheshgoutham2000@gmail.com"
 SOCIAL_MEDIA = {
     
