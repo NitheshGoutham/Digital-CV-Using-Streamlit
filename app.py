@@ -16,11 +16,11 @@ profile_pic = current_dir / "assets" / "profile-img.jpg"
 
 
 # Define the columns
-col1, col2, col3 = st.columns(3)
+row1, row2, row3 = st.beta_columns(3)
 
 # Use the columns and place the content within them
-with col1:
-    st.title("Nithesh Goutham")
+with row1:
+    st.title("Nithesh Goutham M")
     st.write("""
     System Engineer, assisting enterprises by supporting data-driven decision-making.
     """)
@@ -30,13 +30,13 @@ SOCIAL_MEDIA = {
     
     "LinkedIn": "https://www.linkedin.com/in/nithesh-goutham-m-0b0514205/",
     "GitHub": "https://github.com/NitheshGoutham",
-    "Website": "https://twitter.com"
+    "Website": "https://digital-cv-using-streamlit.onrender.com"
 
 }
 PROJECTS = {
     "🏆 youtube data harvesting and warehousing using sql and streamlit ": "https://github.com/NitheshGoutham",
     "🏆 Face-recogition-attendance-system": "https://github.com/NitheshGoutham/Face-recogition-attendance-system-",
-    "🏆 Digital CV using Streamlit": "https://github.com/NitheshGoutham",
+    "🏆 Digital CV using Streamlit": "https://github.com/NitheshGoutham/Digital-CV-Using-Streamlit",
     "🏆 Bank-Management-System": "https://github.com/NitheshGoutham/Bank-Management-System",
     "🏆 Sentinel-2-Data-Processing-for-Pichavaram-Mangrove-Forest-Using-CNN": "https://github.com/NitheshGoutham/Sentinel-2-Data-Processing-for-Pichavaram-Mangrove-Forest-Using-CNN",
 }
