@@ -20,8 +20,8 @@ col1, col2, col3 = st.columns(3)
 
 # Use the columns and place the content within them
 with col1:
-    st.title("Nithesh Goutham M")
-    st.markdown("""<hr style="height:10px;border:none;color:rainbow;background-color:rainbow;" /> """, unsafe_allow_html=True)
+    st.title("Nithesh Goutham M", divider= 'rainbow')
+
     st.write("""
     System Engineer, assisting enterprises by supporting data-driven decision-making.
     """)
