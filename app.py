@@ -22,6 +22,7 @@ System Engineer, assisting enterprises by supporting data-driven decision-making
 """
 PDFbyte = get_pdf_bytes('CV.pdf')
 EMAIL = "nitheshgoutham2000@gmail.com"
+resume_file_name = "CV.pdf"
 SOCIAL_MEDIA = {
     
     "LinkedIn": "https://www.linkedin.com/in/nithesh-goutham-m-0b0514205/",
