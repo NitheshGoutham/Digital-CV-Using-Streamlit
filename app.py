@@ -40,32 +40,7 @@ PROJECTS = {
 
 
 
-
-
-# Define columns
-col1, col2, col3 = st.columns(3)
-
-
-
-# Use the columns
-with col1:
-    st.title(NAME)
-    st.write(DESCRIPTION)
-    st.download_button(
-        label="📄 Download Resume",
-        data=PDFbyte,
-        file_name=resume_file_name,
-        mime="application/octet-stream",
-    )
-
-# You can use col2 and col3 similarly if needed
-with col2:
-    st.write("Content for column 2")
-
-with col3:
-    st.write("Content for column 3")
-
-    st.write("📫", EMAIL)
+st.write("📫", EMAIL)
 
 
 # --- SOCIAL LINKS ---
