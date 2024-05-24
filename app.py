@@ -92,11 +92,7 @@ PROJECTS = {
 
 
 
-# --- LOAD CSS, PDF & PROFIL PIC ---
-with open("downloaded_file.pdf") as f:
-    st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
-with open("C:\\Users\\Nisha Preetha M\\DIgital_CV\\assets\\CV.pdf", "rb") as pdf_file:
-    PDFbyte = pdf_file.read()
+
 
 
 
