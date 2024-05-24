@@ -16,10 +16,10 @@ profile_pic = current_dir / "assets" / "profile-img.jpg"
 
 
 # Define the columns
-row1, row2, row3 = st.beta_columns(3)
+col1, col2, col3 = st.columns(3)
 
 # Use the columns and place the content within them
-with row1:
+with col1:
     st.title("Nithesh Goutham M")
     st.write("""
     System Engineer, assisting enterprises by supporting data-driven decision-making.
