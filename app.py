@@ -43,7 +43,8 @@ PROJECTS = {
 
 
 # --- HERO SECTION ---
-
+# Define columns
+col1 = st.columns(1)
 with col1:
     st.title(NAME)
     st.write(DESCRIPTION)
