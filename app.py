@@ -58,11 +58,8 @@ else:
 
 
 # --- LOAD CSS, PDF & PROFIL PIC ---
-with open("https://drive.google.com/file/d/1o5AbKC9oBTgB2MHX9NsaTXvt6BtmFgX5/view?usp=sharing") as f:
-    st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
-with open("C:\\Users\\Nisha Preetha M\\DIgital_CV\\assets\\CV.pdf", "rb") as pdf_file:
-    PDFbyte = pdf_file.read()
-profile_pic = Image.open("C:\\Users\\Nisha Preetha M\\DIgital_CV\\assets\\profile-img.jpg")
+
+st.image('https://www.google.com/imgres?q=nithesh%20goutham&imgurl=https%3A%2F%2Fmedia.licdn.com%2Fdms%2Fimage%2FC4D03AQFGL6pXJ3UwJQ%2Fprofile-displayphoto-shrink_200_200%2F0%2F1628655140308%3Fe%3D2147483647%26v%3Dbeta%26t%3DkdCHSHzz9GRtptCjTFk4sdDPq0OIYbQv2q0RVtiwICI&imgrefurl=https%3A%2F%2Fin.linkedin.com%2Fin%2Fnithesh-goutham-m-0b0514205%3Ftrk%3Dpublic_profile_browsemap&docid=ssnQop6ZyIQ1dM&tbnid=qR7NrU9wph2M3M&vet=12ahUKEwj9qfyXwaWGAxUC4jgGHT-dCTsQM3oECBwQAA..i&w=200&h=200&hcb=2&ved=2ahUKEwj9qfyXwaWGAxUC4jgGHT-dCTsQM3oECBwQAA', caption='Sunrise by the mountains')
 
 
 
