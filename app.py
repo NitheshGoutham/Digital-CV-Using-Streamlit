@@ -44,7 +44,7 @@ PROJECTS = {
 
 # --- HERO SECTION ---
 
-with col2:
+with col1:
     st.title(NAME)
     st.write(DESCRIPTION)
     st.download_button(
