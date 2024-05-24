@@ -43,9 +43,6 @@ PROJECTS = {
 
 
 # --- HERO SECTION ---
-col1, col2 = st.columns(2, gap="small")
-with col1:
-    st.image(profile-img, width=230)
 
 with col2:
     st.title(NAME)
