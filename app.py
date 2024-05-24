@@ -7,8 +7,7 @@ import streamlit as st
 
 # --- LOAD CSS, PDF & PROFIL PIC ---
 
-with open(resume_file, "rb") as pdf_file:
-    PDFbyte = pdf_file.read()
+
 profile_pic = Image.open(profile-img)
     
 
