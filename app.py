@@ -4,62 +4,15 @@ import requests
 from PyPDF2 import PdfReader
 import streamlit as st
 
-# Set Streamlit page configuration at the very beginning
-st.set_page_config(page_title="PDF Reader", page_icon="📄")
-
-# Function to download file from Google Drive
-def download_file_from_google_drive(file_id, local_path):
-    download_url = f'https://drive.google.com/uc?export=download&id={file_id}'
-    response = requests.get(download_url)
-    
-    if response.status_code == 200:
-        with open(local_path, 'wb') as file:
-            file.write(response.content)
-    else:
-        raise Exception(f"Failed to download file. Status code: {response.status_code}")
-
-# Function to validate PDF file
-def is_pdf_valid(file_path):
-    try:
-        with open(file_path, 'rb') as file:
-            reader = PdfReader(file)
-            return True
-    except Exception as e:
-        return False
-
-# Extracted Google Drive file ID from the provided link
-file_id = '1pyC9WtCBh-fgsE6w1LMQWP_K9WUkqHXv'
-local_file_path = 'downloaded_file.pdf'
-
-# Download and validate PDF file
-try:
-    download_file_from_google_drive(file_id, local_file_path)
-except Exception as e:
-    st.error(f"Failed to download file: {e}")
-    st.stop()
-
-if is_pdf_valid(local_file_path):
-    try:
-        with open(local_file_path, 'rb') as file:
-            reader = PdfReader(file)
-            pdf_text = ""
-            for page_num in range(len(reader.pages)):
-                page = reader.pages[page_num]
-                text = page.extract_text()
-                if text:
-                    pdf_text += text + "\n"
-            st.text_area("Extracted PDF Text", pdf_text, height=300)
-    except FileNotFoundError:
-        st.error(f"File {local_file_path} not found.")
-    except Exception as e:
-        st.error(f"An error occurred while reading the PDF file: {e}")
-else:
-    st.error("The downloaded file is not a valid PDF.")
-
 
 # --- LOAD CSS, PDF & PROFIL PIC ---
+with open(css_file) as f:
+    st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
+with open(resume_file, "rb") as pdf_file:
+    PDFbyte = pdf_file.read()
+profile_pic = Image.open(profile-img)
+    
 
-st.image('https://www.google.com/imgres?q=nithesh%20goutham&imgurl=https%3A%2F%2Fmedia.licdn.com%2Fdms%2Fimage%2FC4D03AQFGL6pXJ3UwJQ%2Fprofile-displayphoto-shrink_200_200%2F0%2F1628655140308%3Fe%3D2147483647%26v%3Dbeta%26t%3DkdCHSHzz9GRtptCjTFk4sdDPq0OIYbQv2q0RVtiwICI&imgrefurl=https%3A%2F%2Fin.linkedin.com%2Fin%2Fnithesh-goutham-m-0b0514205%3Ftrk%3Dpublic_profile_browsemap&docid=ssnQop6ZyIQ1dM&tbnid=qR7NrU9wph2M3M&vet=12ahUKEwj9qfyXwaWGAxUC4jgGHT-dCTsQM3oECBwQAA..i&w=200&h=200&hcb=2&ved=2ahUKEwj9qfyXwaWGAxUC4jgGHT-dCTsQM3oECBwQAA', caption='Sunrise by the mountains')
 
 
 
@@ -67,6 +20,7 @@ st.image('https://www.google.com/imgres?q=nithesh%20goutham&imgurl=https%3A%2F%2
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 css_file = current_dir / "styles" / "main.css"
 resume_file = current_dir / "assets" / "CV.pdf"
+profile_pic = current_dir / "assets" / "profile-img.jpg"
 
 
 
@@ -102,7 +56,7 @@ PROJECTS = {
 # --- HERO SECTION ---
 col1, col2 = st.columns(2, gap="small")
 with col1:
-    st.image("C:\\Users\\Nisha Preetha M\\DIgital_CV\\assets\\profile-img.jpg", width=230)
+    st.image(profile-img, width=230)
 
 with col2:
     st.title(NAME)
