@@ -30,7 +30,7 @@ SOCIAL_MEDIA = {
     
     "LinkedIn": "https://www.linkedin.com/in/nithesh-goutham-m-0b0514205/",
     "GitHub": "https://github.com/NitheshGoutham",
-    "CV": "https://drive.google.com/file/d/1sosfIMpGNNfHu6ezhor0FJq0yjSNSIox/view?usp=sharing"
+    "CV": "https://drive.google.com/file/d/1sosfIMpGNNfHu6ezhor0FJq0yjSNSIox/view?usp=sharing",
     "Website": "https://digital-cv-using-streamlit.onrender.com"
 
 }
