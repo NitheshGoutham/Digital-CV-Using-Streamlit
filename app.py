@@ -20,7 +20,7 @@ NAME = "Nithesh Goutham"
 DESCRIPTION = """
 System Engineer, assisting enterprises by supporting data-driven decision-making.
 """
-PDFbyte = get_pdf_bytes('resume.pdf')
+PDFbyte = get_pdf_bytes('CV.pdf')
 EMAIL = "nitheshgoutham2000@gmail.com"
 SOCIAL_MEDIA = {
     
