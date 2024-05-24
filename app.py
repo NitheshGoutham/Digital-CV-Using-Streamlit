@@ -5,15 +5,6 @@ from PyPDF2 import PdfReader
 import streamlit as st
 
 
-# --- LOAD CSS, PDF & PROFIL PIC ---
-
-
-profile_pic = Image.open(profile-img)
-    
-
-
-
-
 # --- PATH SETTINGS ---
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 css_file = current_dir / "styles" / "main.css"
