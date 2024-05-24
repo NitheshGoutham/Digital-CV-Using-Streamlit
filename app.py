@@ -4,6 +4,8 @@ import requests
 from PyPDF2 import PdfReader
 import streamlit as st
 
+# Set the page configuration
+st.set_page_config(page_title="Digital CV | NG", page_icon=":wave:")
 
 # --- PATH SETTINGS ---
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
@@ -13,15 +15,17 @@ profile_pic = current_dir / "assets" / "profile-img.jpg"
 
 
 
-# --- GENERAL SETTINGS ---
-PAGE_TITLE = "Digital CV | NG"
-PAGE_ICON = ":wave:"
-NAME = "Nithesh Goutham"
-DESCRIPTION = """
-System Engineer, assisting enterprises by supporting data-driven decision-making.
-"""
+# Define the columns
+col1, col2, col3 = st.columns(3)
+
+# Use the columns and place the content within them
+with col1:
+    st.title("Nithesh Goutham")
+    st.write("""
+    System Engineer, assisting enterprises by supporting data-driven decision-making.
+    """)
 EMAIL = "nitheshgoutham2000@gmail.com"
-resume_file_name = "CV.pdf"
+
 SOCIAL_MEDIA = {
     
     "LinkedIn": "https://www.linkedin.com/in/nithesh-goutham-m-0b0514205/",
