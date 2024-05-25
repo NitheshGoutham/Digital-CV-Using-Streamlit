@@ -36,7 +36,7 @@ SOCIAL_MEDIA = {
 
 }
 PROJECTS = {
-    "🏆 youtube data harvesting and warehousing using sql and streamlit ": "https://github.com/NitheshGoutham",
+    "🏆 youtube data harvesting and warehousing using sql and streamlit ": "https://github.com/NitheshGoutham/youtube-data-harvesting-warehousing-using-streamlit",
     "🏆 Face-recogition-attendance-system": "https://github.com/NitheshGoutham/Face-recogition-attendance-system-",
     "🏆 Digital CV using Streamlit": "https://github.com/NitheshGoutham/Digital-CV-Using-Streamlit",
     "🏆 Bank-Management-System": "https://github.com/NitheshGoutham/Bank-Management-System",
