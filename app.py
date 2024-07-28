@@ -37,9 +37,9 @@ SOCIAL_MEDIA = {
 }
 PROJECTS = {
     "🏆 youtube data harvesting and warehousing using sql and streamlit ": "https://github.com/NitheshGoutham/youtube-data-harvesting-warehousing-using-streamlit",
-    "🏆 Face-recogition-attendance-system": "https://github.com/NitheshGoutham/Face-recogition-attendance-system-",
+    "🏆 PhonePe Pulse Data": "https://github.com/NitheshGoutham/Phonepe-Pulse-Data",
     "🏆 Digital CV using Streamlit": "https://github.com/NitheshGoutham/Digital-CV-Using-Streamlit",
-    "🏆 Bank-Management-System": "https://github.com/NitheshGoutham/Bank-Management-System",
+    "🏆 Airbnb Analysis Using PowerBI": "https://github.com/NitheshGoutham/Airbnb-Analysis-Using-PowerBi",
     "🏆 Sentinel-2-Data-Processing-for-Pichavaram-Mangrove-Forest-Using-CNN": "https://github.com/NitheshGoutham/Sentinel-2-Data-Processing-for-Pichavaram-Mangrove-Forest-Using-CNN",
 }
 
@@ -105,7 +105,7 @@ st.write("---")
 
 st.write(
     """
-- 👩‍💻 Programming: Python (Scikit-learn, Pandas,Numpy)
+- 👩‍💻 Programming: Python 
 - 📊 Data Visulization: Citrix XenDesktop & XenApps
 - 📚 Web: HTML, CSS , Stremlit
 - 🗄️ Databases: MySQL
