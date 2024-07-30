@@ -14,8 +14,8 @@ YouTube video here: https://youtu.be/clwpf3VwCZQ
 
 # Requirements
 
-streamlit==1.34.0
-pillow==10.3.0
+streamlit==1.34.0    
+pillow==10.3.0   
 PyPDF2==3.0.1 
 
 ## Contact
