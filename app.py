@@ -50,9 +50,6 @@ st.write("📫", EMAIL)
 
 # --- SOCIAL LINKS ---
 st.write('\n')
-cols = st.columns(len(SOCIAL_MEDIA))
-for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
-    cols[index].write(f"[{platform}]({link})")
 col1,col2,col3=st.columns(3)
     with col1:
         st.link_button('Linkedin','https://www.linkedin.com/in/nithesh-goutham-m-0b0514205/') 
