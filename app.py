@@ -282,10 +282,10 @@ nitheshgoutham2000@gmail.com
         st.link_button('Resume','https://drive.google.com/file/d/1BKw_IAyp1HiHx0BIRE_z_kVBzw0W4oSD/view?usp=sharing') 
 
 
-    image ="C:/Users/Nisha Preetha M/DCV/pp.png"
+    image ="https://media.licdn.com/dms/image/C4D03AQFGL6pXJ3UwJQ/profile-displayphoto-shrink_200_200/0/1628655140308?e=2147483647&v=beta&t=kdCHSHzz9GRtptCjTFk4sdDPq0OIYbQv2q0RVtiwICI"
 
 # Display the image with a reduced size
-    st.image(image, width=300 ) 
+    st.image(image, width=200 ) 
 
 
 if selected == "Skills":
@@ -389,14 +389,12 @@ if selected=="Certifictes":
     st.subheader(':red[***Microsoft Certified: Azure Fundamentals***]')
     st.markdown('''<h6 style='color:grey;font-size:18px'>The certification provides a solid understanding of fundamental cloud computing concepts, including the benefits of cloud services, the differences between various cloud service models (IaaS, PaaS, SaaS), and deployment models (public, private, hybrid).
                         ''',unsafe_allow_html=True)
-    st.image('C:/Users/Nisha Preetha M/DCV/AZ900.png',use_column_width=True)
     st.link_button(label='AZ-900',url='https://learn.microsoft.com/api/credentials/share/en-us/MNitheshGoutham-3071/76E4EACFAA96828B?sharingId=287514430F2C5672',use_container_width=True)
 
 
     st.subheader(':red[***Microsoft 365 Certified: Fundamentals***]')
     st.markdown('''<h6 style='color:grey;font-size:18px'>This certification enables you to contribute to your organization’s digital transformation by implementing cloud-based solutions that improve collaboration, security, and compliance. You'll be positioned to advocate for the adoption of Microsoft 365 solutions and ensure they align with organizational goals.
                 You will understand the different pricing options and licensing models for Microsoft 365 services, including business and enterprise plans. This will also cover support options and methods for resolving issues that arise within Microsoft 365.''',unsafe_allow_html=True)
-    st.image('C:/Users/Nisha Preetha M/DCV/MS900.png',use_column_width=True)
     st.link_button(label='MS-900',url='https://learn.microsoft.com/api/credentials/share/en-us/MNitheshGoutham-3071/4A4B03CD72235B0B?sharingId=287514430F2C5672',use_container_width=True)
 
 
@@ -404,7 +402,6 @@ if selected=="Certifictes":
     st.markdown('''<h6 style='color:grey;font-size:18px'> The certification process ensures that your knowledge is current with the latest Azure technologies and best practices, which is important in the rapidly evolving field of cloud computing.
                 It provides a comprehensive understanding of Azure services and administration, which is essential for working in cloud environments. This knowledge is foundational for many roles in IT and cloud computing.
                 Overall, studying for and achieving the AZ-104 certification can be a significant asset in building a career in cloud computing and IT.''',unsafe_allow_html=True)
-    st.image('C:/Users/Nisha Preetha M/DCV/AZ-104.png',use_column_width=True)
     st.link_button(label='AZ-104',url='https://learn.microsoft.com/api/credentials/share/en-us/MNitheshGoutham-3071/CB82F1F614C4B016?sharingId=287514430F2C5672',use_container_width=True)
 
 
@@ -412,7 +409,6 @@ if selected=="Certifictes":
     st.markdown('''<h6 style='color:grey;font-size:18px'>This certification is beneficial for roles such as Azure Virtual Desktop Administrator or Cloud Infrastructure Engineer, where expertise in virtual desktop environments is required.
                  Azure Virtual Desktop is a key component of many organizations’ cloud strategies, so expertise in this area can be highly valuable.
                  It provides specialized skills for managing Azure Virtual Desktop environments, which are becoming increasingly important as remote work and virtualization continue to grow.''',unsafe_allow_html=True)
-    st.image('C:/Users/Nisha Preetha M/DCV/AZ-140.png',use_column_width=True)
     st.link_button(label='AZ-140',url='https://learn.microsoft.com/api/credentials/share/en-us/MNitheshGoutham-3071/784900D13054A668?sharingId=287514430F2C5672',use_container_width=True)
 
 
@@ -420,7 +416,6 @@ if selected=="Certifictes":
     st.markdown('''<h6 style='color:grey;font-size:18px'>The Microsoft Certified: Security, Compliance, and Identity Fundamentals (SC-900) certification is aimed at individuals who want to understand the basics of security, compliance, and identity concepts within the Microsoft ecosystem.
                 Learn about compliance principles and how Microsoft solutions can help organizations meet regulatory requirements. This includes understanding compliance frameworks and how to implement compliance solutions in Microsoft environments.
                 Get an overview of how to implement and manage security, compliance, and identity solutions in Microsoft environments, including basic tasks and responsibilities.''',unsafe_allow_html=True)
-    st.image('C:/Users/Nisha Preetha M/DCV/SC900.png',use_column_width=True)
     st.link_button(label='SC-900',url='https://learn.microsoft.com/api/credentials/share/en-us/MNitheshGoutham-3071/C8E21911142D5B92?sharingId=287514430F2C5672',use_container_width=True)
 
     st.subheader(':red[***Microsoft Certified: Azure Data Fundamentals***]')
@@ -428,7 +423,6 @@ if selected=="Certifictes":
                 Learn about various Azure data services, including Azure SQL Database, Azure Cosmos DB, Azure Data Lake, and Azure Synapse Analytics.You'll understand how different data storage solutions work in Azure and how to choose the appropriate service for your needs.
                 Get acquainted with different data processing options available in Azure, such as batch and stream processing.
                 Understand the basic principles of data security and compliance in Azure, including data encryption and access controls.''',unsafe_allow_html=True)
-    st.image('C:/Users/Nisha Preetha M/DCV/DP900.png',use_column_width=True)
     st.link_button(label='DP-900',url='https://learn.microsoft.com/api/credentials/share/en-us/MNitheshGoutham-3071/7F4BD48D91B6A7B?sharingId=287514430F2C5672',use_container_width=True)
 
 
