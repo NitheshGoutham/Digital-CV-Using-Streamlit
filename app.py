@@ -279,7 +279,7 @@ nitheshgoutham2000@gmail.com
     with col3:
         st.link_button('Website','https://digital-cv-using-streamlit.onrender.com/')  
     with col4:
-        st.link_button('Resume','https://drive.google.com/file/d/1BKw_IAyp1HiHx0BIRE_z_kVBzw0W4oSD/view?usp=sharing') 
+        st.link_button('Resume','https://drive.google.com/file/d/1roITZZlNCll7ufFvCDxufjYzUvwnNmNU/view?usp=drive_link') 
 
 
     image ="https://media.licdn.com/dms/image/C4D03AQFGL6pXJ3UwJQ/profile-displayphoto-shrink_200_200/0/1628655140308?e=2147483647&v=beta&t=kdCHSHzz9GRtptCjTFk4sdDPq0OIYbQv2q0RVtiwICI"
