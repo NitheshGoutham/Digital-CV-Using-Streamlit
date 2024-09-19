@@ -381,7 +381,7 @@ if selected == "Skills":
 
 
 
-if selected=="Certifictes":
+if selected=="Certificates":
 
 
     st.subheader("Certifictes")
