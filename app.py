@@ -11,7 +11,7 @@ st.set_page_config(page_title="Digital CV | NG", page_icon=":wave:")
 #set up the sidebar with optionmenu
 with st.sidebar:
     selected = option_menu("MainMenu",
-                            options=["Summary","Professional Experience","Skills","Projects","Certifictes","Education","Connect"],
+                            options=["Summary","Professional Experience","Skills","Projects","Certificates","Education","Connect"],
                             default_index=1,
                             orientation="vertical",)
     
@@ -30,92 +30,68 @@ if selected=="Professional Experience":
 
     st.link_button(label='Official Website',url='https://atos.net/en/india',use_container_width=True)
     st.subheader("**Atos Global IT Solution , :red[Chennai]**")
-    st.subheader(" June'22 - Present ")
-    st.write("🚧", "**:red[System Engineer | Cirtix Support Engineer]**")
+    st.subheader(" June'22 - September'24 ")
+    st.subheader("**:red[System Engineer]**")
+    st.write("🚧", "**:red[ Cirtix Support Engineer]**")
     st.write(
         """
-    - ► Administered and maintained Citrix infrastructure for optimal performance, ensuring seamless access to applications and desktops for end-users
-    - ► Engaged in regular updates and patch management to ensure the Citrix environment's stability and compliance
-    - ► Conducted routine monitoring, performance tuning, and capacity planning to optimize Citrix infrastructure
-    - ► Hands-on experience in configuring and managing Citrix Cloud services, storefront including XenApp and Xen Desktop
-    - ► Monitored system operations and generated daily and weekly performance reports.
-    - ► Maintained related Windows networking and established remote accessibility.
-    - ► Identified and resolved LAN and WAN network issues affecting Citrix network.
-    - ► Daily maintenance and troubleshooting of the servers in Citrix
-    - ► Participated in on-call rotation to provide 24/7 support for critical Citrix infrastructure issues.
-    - ►  Developed and maintained disaster recovery plans and procedures to ensure business continuity in case of system failures.
+    -  Administered and maintained Citrix infrastructure for optimal performance, ensuring seamless access to applications and desktops for end-users
+    -  Engaged in regular updates and patch management to ensure the Citrix environment's stability and compliance
+    -  Conducted routine monitoring, performance tuning, and capacity planning to optimize Citrix infrastructure
+    -  Hands-on experience in configuring and managing Citrix Cloud services, storefront including XenApp and Xen Desktop
+    -  Monitored system operations and generated daily and weekly performance reports.
+    -  Maintained related Windows networking and established remote accessibility.
+    -  Identified and resolved LAN and WAN network issues affecting Citrix network.
+    -  Daily maintenance and troubleshooting of the servers in Citrix
+    -  Developed and maintained disaster recovery plans and procedures to ensure business continuity in case of system failures.
 
 
     """
     )
 
     st.write('\n')
-    st.write("🚧", "**:red[Associate Engineer | L1 Service Desk]**")
+    st.write("🚧", "**:red[L1 Service Desk]**")
     st.write(
         """
-    - ► logging diagnosing and managing incoming end-user requests 
-    - ► Identifying calls as either Service Request or Incident 
-    - ► Prioritizing calls against agreed upon Service Levels Agreements 
-    - ► Determining the Priority level of the Incident.
-    - ► Determining the action required to resolve tickets 
-    - ► Escalations and referral to other parts of the organization 
-    - ► Managing issues through to resolution
-    - ► Monitoring and status tracking of registered tickets
-    - ► Maintenance and support of Active Directory Federated Services, related hardware, and technologies
-    - ► Maintenance and support of DNS
-    - ► Top Level OU Management
-    - ► Migration Issues
-    - ► Security Scans
-    - ► Certificate Administration
-    - ► DHCP Servers
+    
+    -  Acted as the first point of contact for end-users via phone, email, or ticketing system.
+    -  Achieved a 75% first-call resolution rate, improving user satisfaction and reducing escalations.
+    -  Diagnosed and troubleshot IT issues related to hardware, software, network, and peripherals.
+    -  Escalated complex issues to L2/L3 teams with thorough documentation.
+    -  Serve as the first point of contact for end-users seeking technical assistance via phone, email, or ticketing system.
+    -  Log, categorize, and prioritize incidents and service requests in the ticketing system, ensuring accurate documentation and timely resolution
+    -  Assist with user account tasks such as password resets, account unlocks, and basic Active Directory maintenance.
+    -  Participated in on-call rotation to provide 24/7 support for critical Citrix infrastructure issues.
+
     """
     )
 
     
-    st.write('\n')
-    st.write("🚧", "**:red[Trainee | Active Directory Support]**")
-    st.write(
-        """
-    - ► Maintenance and support of Active Directory Federated Services, related hardware, and technologies 
-    - ► Maintenance and support of DNS
-    - ► Top Level OU Management 
-    - ► Migration Issues
-    - ► Security Scans
-    - ► Certificate Administration 
-    - ► DHCP Servers
-
-    """
-    )
+   
     
 if selected=="Summary":
     
     st.title(":red[Nithesh] Goutham M ")
     st.subheader( "System :red[Enginner]")
     st.subheader(':red[Summary]')
-    st.markdown(''' Dedicated and proactive Systems Engineer with over 2 years of experience in designing, implementing, andmaintaining complex IT systems.
-                 Expert in managing full project lifecycles, including requirement gathering,design, development, and deployment.
-                Strong analytical skills combined with experience in optimizing systemfunctionality and enhancing operational efficiency.''')
-    st.markdown('''My background includes expertise in server configuration, network management, and systems integration, with a focus on ensuring the reliability, security, and efficiency of IT infrastructures.
-                 I have worked extensively with both Windows and Linux environments, and I am proficient in using virtualization technologies such as VMware and Hyper-V.''')
+    st.markdown(''' Dedicated and proactive professional with over 2 years of experience in system engineering, focusing on Citrix administration, Active Directory, and service desk support. 
+                    I have a strong foundation in designing, implementing, and maintaining IT infrastructures, with expertise in server configuration, network management, and virtualization technologies like VMware and Hyper-V. 
+                    Throughout my career, I’ve developed excellent problem-solving skills, often using automation tools like PowerShell and Python to streamline tasks and improve operational efficiency..''')
+    st.markdown('''Recently, I’ve shifted my focus towards data science, earning a certification from GUVI’s Master Data Science Program. I’ve gained hands-on experience with machine learning, statistical modeling, and predictive analytics, and I’m proficient in Python and SQL. 
+                    My goal is to apply these skills to drive insights and improve business outcomes through data-driven decision-making.''')
 
-    st.markdown('''Throughout my career, I’ve developed strong problem-solving skills, often automating routine tasks through scripting in PowerShell and Python to improve system performance and reduce downtime. 
-                I have a keen understanding of network protocols, firewalls, and security best practices, allowing me to troubleshoot and optimize networks effectively.
-                Collaboration is key in my role, and I work closely with cross-functional teams to support system upgrades, migrations, and deployments, always ensuring that solutions align with business needs. 
-                My goal is to continue advancing my skills in cloud technologies and automation while contributing to high-performing IT environments..''')
+    st.markdown('''Additionally, I’ve completed an MBA in HRM, further fueling my interest in the management side of technology and operations. 
+                    I am eager to explore roles that combine my technical expertise with leadership and strategic decision-making in management.''')
    
-    st.markdown('''On the service desk side, I have provided front-line technical support, resolving a wide range of user issues, from hardware troubleshooting to software and network configurations. 
-                My strong communication skills allow me to effectively collaborate with end-users and IT teams, ensuring timely resolution of technical problems and excellent user satisfaction.''')
-    st.markdown('''In addition, I have a strong background in Active Directory, where I have handled user and group management, permissions, and access control, ensuring secure and organized IT environments. 
-                My service desk experience includes providing technical support, troubleshooting hardware, software, and network issues, while maintaining clear communication with end-users to deliver prompt solutions.''')
-    st.markdown('''Additionally, I have a strong background in providing front-line technical support, resolving a variety of hardware, software, and network issues. 
-                I am also deeply interested in expanding my career into data science engineering, exploring how data-driven insights can be leveraged to improve system performance and operational efficiency.''')
+    st.markdown('''With a keen interest in cloud technologies, I’m also exploring certifications like AZ-104 and AZ-140 to deepen my understanding of Azure and cloud-based solutions. 
+                    I am actively seeking roles in data science and management, where I can leverage my technical background, data science skills, and leadership potential to contribute effectively to organizational growth.''')
+    st.markdown('''Let’s connect and discuss how my diverse skills, certifications, and management insights align with your organization’s needs.''')
     
 
 
 
 if selected =="Education":
 
-    st.subheader('Education')
     st.subheader(':red[Rajalakshmi Engineering College, Chennai]')
     st.markdown('Bachelor of Engineering in ECE 2018 – 2022')
     st.markdown('CGPA: 8.2/10')
@@ -177,6 +153,12 @@ if selected == "Projects":
                         ''',unsafe_allow_html=True)
             
             st.link_button(label='Digital CV',url='https://digital-cv-using-streamlit.onrender.com/',use_container_width=True)
+
+        with st.expander(':red[***K-Means Clustering: Airline-Customer-Value-Analysis***]'):
+            st.markdown('''<h6 style='color:grey;font-size:18px'>The project aims to analyze airline customer value using K-Means clustering to segment customers based on factors such as travel frequency, spending habits, ticket preferences, and loyalty status. By identifying distinct customer segments, the model will help airlines optimize marketing strategies, tailor loyalty programs, and enhance customer experience.
+                            The model will also be designed to adapt to evolving customer behaviors and trends, allowing airlines to continuously refine their customer segmentation over time.''',unsafe_allow_html=True)
+            
+            st.link_button(label='Airline Customer Segmentation',url='https://github.com/NitheshGoutham/Airline-Customer-Segmentation',use_container_width=True)
 
         with st.expander(':red[***Singapore Reslae Flat Price Predicting***]'):
             st.markdown('''<h6 style='color:grey;font-size:18px'>The project will deliver a machine learning model capable of predicting the resale prices of flats in Singapore based on features such as location, size, flat type, age, and nearby amenities. 
@@ -246,7 +228,11 @@ if selected == "Projects":
             
             st.link_button(label='Bank Management System',url='https://github.com/NitheshGoutham/Bank-Management-System',use_container_width=True)
 
-
+        with st.expander(':red[***A Study on Employees Training and Deveopment with Refernce to Saehan Stamping Limited***]'):
+            st.markdown('''<h6 style='color:grey;font-size:18px'>The project investigates the impact of training and development programs on employees at Saehan Stamping Limited.
+                             It examines how these initiatives enhance employee skills, performance, and job satisfaction, contributing to overall organizational growth. The study also provides recommendations to improve the effectiveness of current training practices, aiming to foster a more skilled and productive workforce.''',unsafe_allow_html=True)
+            
+            st.link_button(label='Employees T & D',url='https://github.com/NitheshGoutham/A-STUDY-ON-EMPLOYEES-TRAINING-AND-DEVELOPMENT-',use_container_width=True)
 
 
 
@@ -256,16 +242,14 @@ if selected=="Connect":
     
     st.markdown('''<h6 style='color:grey;font-size:22px'>Hi there,<br>
 
-I’m Nithesh Goutham M, and I have experience in system engineering with a focus on Citrix administration, Active Directory, and service desk roles. 
-Currently, I’m exploring opportunities to transition into data science engineering.
-                 I’m particularly interested in cloud technologies and virtualization, which is why I’m looking into certifications like AZ-104 and AZ-140 to deepen my expertise in Azure and related technologies.
+I’m Nithesh Goutham M, with experience in system engineering, focusing on Citrix administration, Active Directory, and service desk roles. Currently, I’m transitioning into the field of data science engineering. I have strong skills in data analysis, machine learning, and predictive modeling, and I’m continuously expanding my expertise through projects and certifications, including cloud technologies and data science tools.
 
-Feel free to connect with me—I’m eager to discuss how my skills and interests align with your needs!
+I’m actively seeking opportunities in data science roles, where I can apply my analytical and problem-solving skills to drive impactful insights and solutions. Let’s connect and discuss how my experience and interests can align with your organization's goals!
 
-Best regards,<br>
-Nithesh Goutham M<br>
-+919566679191<br>
-nitheshgoutham2000@gmail.com
+Best regards,   
+Nithesh Goutham M   
++919566679191   
+nitheshgoutham2000@gmail.com   
 
 
                         ''',unsafe_allow_html=True)
@@ -279,7 +263,7 @@ nitheshgoutham2000@gmail.com
     with col3:
         st.link_button('Website','https://digital-cv-using-streamlit.onrender.com/')  
     with col4:
-        st.link_button('Resume','https://drive.google.com/file/d/1roITZZlNCll7ufFvCDxufjYzUvwnNmNU/view?usp=drive_link') 
+        st.link_button('Resume','https://drive.google.com/file/d/1JCBmLEyoyDTHa0XKjUvLaBUIqQ-PErHQ/view?usp=sharing') 
 
 
     image ="https://media.licdn.com/dms/image/C4D03AQFGL6pXJ3UwJQ/profile-displayphoto-shrink_200_200/0/1628655140308?e=2147483647&v=beta&t=kdCHSHzz9GRtptCjTFk4sdDPq0OIYbQv2q0RVtiwICI"
@@ -293,34 +277,113 @@ if selected == "Skills":
     
     # Using a container
     with st.container():
-        st.markdown("### :red[Hard Skills]", unsafe_allow_html=True)  # Styled heading
+        st.markdown("### :red[Programming Languages]", unsafe_allow_html=True)  # Styled heading
 
     # Expander for skills
-    with st.expander("Click to view Hard Skills"):
+    with st.expander("Programming Languages"):
         st.write('''
-        - LAN
-        - WAN AD
-        - DHCP
-        - Networking 
-        - Adminstrative Support
-        - Group Policy
-        - Troubleshooting
+        - Python
+        - SQL 
+       ''')
+    with st.container():
+        st.markdown("### :red[Data Manipulation and Analysis]", unsafe_allow_html=True)
+
+    # Expander for skills
+    with st.expander("Click to view Data Manipulation and Analysis"):
+        st.write('''
+        - Pandas (Python)
+        - NumPy
+        - Data Wrangling
+        - Data Cleaning
         ''')
     with st.container():
-        st.markdown("### :red[Technical Skills]", unsafe_allow_html=True)
+        st.markdown("### :red[Statistical Analysis]", unsafe_allow_html=True)
 
     # Expander for skills
-    with st.expander("Click to view Technical Skills"):
+    with st.expander("Click to view Statistical Analysis"):
         st.write('''
-        - Incident Management 
-        - Remote Desktop
-        - VPN
-        - Office 365 online exchange
-        - Software Installation
-        - Configuration in windows
+        - Descriptive and Inferential Statistics
+        - Hypothesis Testing
+        - Probability Theory
+        - Regression Analysis (Linear, Logistic)
         ''')
+
+    with st.container():
+        st.markdown("### :red[Machine Learning]", unsafe_allow_html=True)
+
+    # Expander for skills
+    with st.expander("Click to view Machine Learning"):
+        st.write('''
+        - Supervised Learning (Regression, Classification)
+        - Unsupervised Learning (Clustering, Dimensionality Reduction)
+        - Ensemble Methods (Random Forest, XGBoost)
+        - Neural Networks (optional for deep learning)
+        - Model Evaluation Metrics (Accuracy, Precision, Recall, F1-score, ROC-AUC)
+        ''')
+    with st.container():
+        st.markdown("### :red[Data Visualization]", unsafe_allow_html=True)
+
+    # Expander for skills
+    with st.expander("Click to view Data Visualization"):
+        st.write('''
+        - Matplotlib (Python)
+        - Seaborn (Python)
+        - Plotly
+        - Power BI / Tableau 
+        ''')
+    with st.container():
+        st.markdown("### :red[Database Management]", unsafe_allow_html=True)
+
+    # Expander for skills
+    with st.expander("Click to view Database Management"):
+        st.write('''
+        - SQL (PostgreSQL, MySQL)
+     ''')
+
+    with st.container():
+        st.markdown("### :red[Cloud Platforms]", unsafe_allow_html=True)
+
+    # Expander for skills
+    with st.expander("Click to view Cloud Platforms"):
+        st.write('''
+        - Microsoft Azure 
+        - Citrix
+     ''')
+
+    with st.container():
+        st.markdown("### :red[Data Engineering]", unsafe_allow_html=True)
+
+    # Expander for skills
+    with st.expander("Click to view Data Engineering"):
+        st.write('''
+        - ETL (Extract, Transform, Load) processes
+        - Apache Kafka (for real-time data streaming)
+     ''')
+
+    with st.container():
+        st.markdown("### :red[Natural Language Processing (NLP)]", unsafe_allow_html=True)
+
+    # Expander for skills
+    with st.expander("Click to view NLP"):
+        st.write('''
+        - Text Preprocessing (Tokenization, Lemmatization, etc.)
+        - Word Embeddings (Word2Vec, GloVe)
+        - Sentiment Analysis
+     ''')
+     
+    with st.container():
+        st.markdown("### :red[Deep Learning]", unsafe_allow_html=True)
+
+    # Expander for skills
+    with st.expander("Click to view Deep Learning"):
+        st.write('''
+        - TensorFlow / Keras
+        - PyTorch
+     ''')
+     
+     
+    with st.container():
     
-    with st.container():
         st.markdown("### :red[Ticketing Tools]", unsafe_allow_html=True)  
 
     # Expander for skills
@@ -331,17 +394,6 @@ if selected == "Skills":
         - Genesys
         ''')
 
-    with st.container():
-        st.markdown("### :red[Language]", unsafe_allow_html=True)  
-
-    # Expander for skills
-    with st.expander("Click to view Languages"):
-        st.write('''
-        - Python in AI & ML
-        - NumPy
-        - Pandas
-        - MS PowerBi
-        ''')
 
     with st.container():
         st.markdown("### :red[Web]", unsafe_allow_html=True)  
@@ -354,37 +406,22 @@ if selected == "Skills":
         - CSS
         ''')
 
-    with st.container():
-        st.markdown("### :red[Cloud]", unsafe_allow_html=True)  
-
-    # Expander for skills
-    with st.expander("Click to view Cloud"):
-        st.write('''
-        - Citrix XenDesktop
-        - Citrix XenApp
-        - Citrix XenServer
-        ''')
-    with st.container():
-        st.markdown("### :red[Database]", unsafe_allow_html=True)  
-
-    # Expander for skills
-    with st.expander("Click to view Database"):
-        st.write('''
-        - MySQL 
-        ''')
-
-    
-
-
    
-    
 
 
 
 if selected=="Certificates":
 
 
-    st.subheader("Certifictes")
+    st.subheader("Certificates")
+    
+    st.subheader(':red[***Master Data Science Program***]')
+    st.markdown('''<h6 style='color:grey;font-size:18px'>The certification provides a comprehensive understanding of key data science concepts, including data analysis, machine learning, statistical modeling, and data visualization. It covers essential tools and technologies such as Python, R, SQL, and popular machine learning algorithms. 
+            The program also emphasizes real-world applications, helping participants develop practical skills for solving complex data-driven problems. ''',unsafe_allow_html=True)
+    st.link_button(label='Data Science',url='https://www.guvi.in/share-certificate/0497J024114L03b8V9',use_container_width=True)
+
+
+   
     
     st.subheader(':red[***Microsoft Certified: Azure Fundamentals***]')
     st.markdown('''<h6 style='color:grey;font-size:18px'>The certification provides a solid understanding of fundamental cloud computing concepts, including the benefits of cloud services, the differences between various cloud service models (IaaS, PaaS, SaaS), and deployment models (public, private, hybrid).
