@@ -211,7 +211,14 @@ if selected == "Projects":
                         ''',unsafe_allow_html=True)
             
             st.link_button(label='Sentinel-2 Data Processing',url='https://github.com/NitheshGoutham/Sentinel-2-Data-Processing-for-Pichavaram-Mangrove-Forest-Using-CNN',use_container_width=True)
-
+            
+        with st.expander(':red[***Flask and Streamlit CRUD Application-***]'):
+            st.markdown('''<h6 style='color:grey;font-size:18px'>TThe project will deliver a full-stack application that enables efficient data management through a user-friendly interface. Using Flask as the backend, the application will handle CRUD (Create, Read, Update, Delete) operations, facilitating dynamic data interactions in real time. Streamlit will provide the frontend, offering a seamless and interactive user experience for managing records.
+                        The project is designed for scalability and could be adapted for various applications, including employee databases, product inventories, and customer relationship management. The MySQL database is structured to securely store and manage records, while the Flask API ensures fast and reliable data processing.
+                        This project will serve as a showcase of the user's skills in web development, API integration, data management, and building efficient workflows. It demonstrates proficiency in backend/frontend integration and practical expertise in deploying robust data management solutions, adding depth to the user's data engineering and application development portfolio.''',unsafe_allow_html=True)
+            
+            st.link_button(label='Flask and Stermalit CRUD',url='https://github.com/NitheshGoutham/Flask-and-Streamlit-CRUD-Application-',use_container_width=True)
+            
         with st.expander(':red[***Face Recognition Attendance System***]'):
             st.markdown('''<h6 style='color:grey;font-size:18px'>The system will provide an automated solution for tracking attendance using face recognition technology. It will accurately log attendance in real-time as individuals are recognized by the system, eliminating the need for manual check-ins or sign-ins.
                         The system will incorporate security measures to ensure that face recognition data is handled securely and privately. This will include data encryption, secure storage, and compliance with privacy regulations to protect individuals' biometric information.
