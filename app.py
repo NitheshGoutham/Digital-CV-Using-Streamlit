@@ -1,5 +1,7 @@
-
 from pathlib import Path
+from datetime import datetime
+from transformers import pipeline
+from transformers import BlenderbotTokenizer, BlenderbotForConditionalGeneration
 import io
 import requests
 from PyPDF2 import PdfReader
@@ -11,7 +13,7 @@ st.set_page_config(page_title="Digital CV | NG", page_icon=":wave:")
 #set up the sidebar with optionmenu
 with st.sidebar:
     selected = option_menu("MainMenu",
-                            options=["Summary","Professional Experience","Skills","Projects","Certificates","Education","Connect"],
+                            options=["Summary","Professional Experience","Skills","Projects","Certificates","Education","Connect", "Ask Me"],
                             default_index=1,
                             orientation="vertical",)
     
@@ -72,7 +74,7 @@ if selected=="Professional Experience":
 if selected=="Summary":
     
     st.title(":red[Nithesh] Goutham M ")
-    st.subheader( "System :red[Enginner]")
+    st.subheader( "Software :red[Engineer]")
     st.subheader(':red[Summary]')
     st.markdown(''' Dedicated and proactive professional with over 2 years of experience in system engineering, focusing on Citrix administration, Active Directory, and service desk support. 
                     I have a strong foundation in designing, implementing, and maintaining IT infrastructures, with expertise in server configuration, network management, and virtualization technologies like VMware and Hyper-V. 
@@ -211,14 +213,7 @@ if selected == "Projects":
                         ''',unsafe_allow_html=True)
             
             st.link_button(label='Sentinel-2 Data Processing',url='https://github.com/NitheshGoutham/Sentinel-2-Data-Processing-for-Pichavaram-Mangrove-Forest-Using-CNN',use_container_width=True)
-            
-        with st.expander(':red[***Flask and Streamlit CRUD Application-***]'):
-            st.markdown('''<h6 style='color:grey;font-size:18px'>TThe project will deliver a full-stack application that enables efficient data management through a user-friendly interface. Using Flask as the backend, the application will handle CRUD (Create, Read, Update, Delete) operations, facilitating dynamic data interactions in real time. Streamlit will provide the frontend, offering a seamless and interactive user experience for managing records.
-                        The project is designed for scalability and could be adapted for various applications, including employee databases, product inventories, and customer relationship management. The MySQL database is structured to securely store and manage records, while the Flask API ensures fast and reliable data processing.
-                        This project will serve as a showcase of the user's skills in web development, API integration, data management, and building efficient workflows. It demonstrates proficiency in backend/frontend integration and practical expertise in deploying robust data management solutions, adding depth to the user's data engineering and application development portfolio.''',unsafe_allow_html=True)
-            
-            st.link_button(label='Flask and Stermalit CRUD',url='https://github.com/NitheshGoutham/Flask-and-Streamlit-CRUD-Application-',use_container_width=True)
-            
+
         with st.expander(':red[***Face Recognition Attendance System***]'):
             st.markdown('''<h6 style='color:grey;font-size:18px'>The system will provide an automated solution for tracking attendance using face recognition technology. It will accurately log attendance in real-time as individuals are recognized by the system, eliminating the need for manual check-ins or sign-ins.
                         The system will incorporate security measures to ensure that face recognition data is handled securely and privately. This will include data encryption, secure storage, and compliance with privacy regulations to protect individuals' biometric information.
@@ -469,7 +464,154 @@ if selected=="Certificates":
                 Understand the basic principles of data security and compliance in Azure, including data encryption and access controls.''',unsafe_allow_html=True)
     st.link_button(label='DP-900',url='https://learn.microsoft.com/api/credentials/share/en-us/MNitheshGoutham-3071/7F4BD48D91B6A7B?sharingId=287514430F2C5672',use_container_width=True)
 
+    st.subheader(':red[***GitHub Copilot Fundamentals - Understand the AI pair programmer***]')
+    st.markdown('''<h6 style='color:grey;font-size:18px'> This certification validates your understanding of GitHub Copilot as an AI-powered pair programming tool. Learn to integrate Copilot with IDEs, automate coding tasks, and use it effectively to enhance productivity. 
+                    Explore best practices, ethical considerations, and techniques to guide Copilot for efficient code generation.''',unsafe_allow_html=True)
+    st.link_button(label='Github Copilot',url='https://learn.microsoft.com/en-us/users/mnitheshgoutham-3071/achievements/print/fvlzmrnx?tab=tab-learning-paths',use_container_width=True)
+
+
+if selected=="Ask Me":
+
+    import random
+    import time
+    from datetime import datetime
+    import streamlit as st
+
+    # Set the title of the app
+    st.title("Digital CV - Chat with Me!")
+
+    # Time-based greeting
+    current_hour = datetime.now().hour
+    if current_hour < 12:
+        st.write("🌞 Good Morning! I'm here to answer your questions about my professional journey.")
+    elif 12 <= current_hour < 18:
+        st.write("☀️ Good Afternoon! Feel free to ask me anything about my career and skills.")
+    else:
+        st.write("🌙 Good Evening! Let's chat about my experience and projects.")
+
+    st.write("Ask me questions about my professional experience, skills, projects, and more.")
+
+    # Sample questions for users
+    sample_questions = [
+        "Who are you?",
+        "Can you tell me about your educational background?",
+        "Can you tell me about your professional background?",
+        "What projects have you worked on?",
+        "What is your expertise in Python?",
+        "Can you explain your Singapore Resale Flat Prices Predicting project?",
+        "What tools do you use for data science?",
+        "How do you handle teamwork challenges?",
+        "What are the challenges you faced in data analysis?",
+        "What did you learn from your MBA in HRM?",
+        "What advice would you give to aspiring developers?",
+        "Which project are you most proud of, and why?"
+    ]
+
+    # Function to emulate streaming responses
+    def response_generator(response_text):
+        for word in response_text.split():
+            yield word + " "
+            time.sleep(0.05)
+
+    st.subheader("Interactive Chat with Nithesh")
+
+    # Initialize session state for chat
+    if "messages" not in st.session_state:
+        st.session_state.messages = []
+        st.session_state.messages.append(
+            {
+                "role": "assistant",
+                "content": "Hi! I'm here to help. Select a question below or type your own query to get started!",
+            }
+        )
+
+    # Display sample questions as a dropdown
+    selected_question = st.selectbox(
+        "Suggested Questions:", ["Select a question"] + sample_questions
+    )
+
+    # Display chat messages
+    for message in st.session_state.messages:
+        with st.chat_message(message["role"]):
+            st.markdown(message["content"])
+
+    # Process user input from dropdown or custom input
+    if selected_question != "Select a question":
+        prompt = selected_question
+    else:
+        prompt = st.chat_input("Ask your question here:")
+
+    if prompt:
+        # Add user message to chat
+        st.session_state.messages.append({"role": "user", "content": prompt})
+        with st.chat_message("user"):
+            st.markdown(prompt)
+
+        # Generate response based on user input
+        response_text = ""
+
+        if "who are you" in prompt.lower():
+            response_text = (
+                "I am Nithesh Goutham M, a professional with a strong foundation in IT, data science, and human resource management. I am passionate about analyzing data to generate insights and drive impactful solutions, while also having experience in management processes and teamwork."
+            )
+        elif "educational background" in prompt.lower():
+            response_text = (
+                "I hold a Bachelor’s degree in Engineering from Rajalakshmi Engineering College, completed in 2022. Additionally, I pursued an MBA in Human Resource Management from Pondicherry University to deepen my understanding of organizational behavior, leadership, and strategic planning. To advance my career in data science, I completed a data science certification from GUVI, which covered Python, Machine Learning, Deep Learning, MySQL, and Power BI."
+            )
+        elif "professional background" in prompt.lower():
+            response_text = (
+                "I began my career as a Systems Engineer at Atos Global IT Solutions, where I worked for two years in roles like Service Desk Engineer and Major Incident Manager. During this time, I gained expertise in ITIL processes, Active Directory, Citrix, and ServiceNow. Subsequently, I transitioned to data science, building projects that apply machine learning, AI, and data analysis techniques to solve real-world problems."
+            )
+        elif "projects" in prompt.lower():
+            response_text = (
+                "I've worked on several projects, including Singapore Resale Flat Prices Predicting, Pichavaram Mangrove Analysis using CNN, Airline Customer Segmentation, and YouTube Data Harvesting and Warehousing."
+            )
+        elif "python" in prompt.lower():
+            response_text = (
+                "I am skilled in Python for data analysis, machine learning, and automation. My expertise includes libraries like Pandas, NumPy, Matplotlib, Seaborn, and Scikit-learn, as well as frameworks like TensorFlow, Flask, and Streamlit for application development and data visualization."
+            )
+        elif "singapore" in prompt.lower():
+            response_text = (
+                "In the Singapore Resale Flat Prices Predicting project, I analyzed Singapore's HDB flat data to predict resale prices. I collected historical data, performed feature engineering, and trained models like Linear Regression and Random Forest, achieving an R² score of 0.9997."
+            )
+        elif "project are you most proud" in prompt.lower():
+            response_text = (
+                "The project I am most proud of is Sentinel-2 Data Processing for Pichavaram Mangrove Forest Using CNN, where I analyzed satellite images to classify vegetation with 96% accuracy."
+            )
+        elif "tools" in prompt.lower():
+            response_text = (
+                "I use tools like Python, R, Pandas, NumPy, Scikit-learn, TensorFlow, MySQL, Power BI, Tableau, and Streamlit for data analysis and machine learning."
+            )
+        elif "teamwork challenges" in prompt.lower():
+            response_text = (
+                "I address teamwork challenges by focusing on clear communication, active listening, and collaboration. I ensure everyone understands the goals, mediate conflicts constructively, and foster alignment within the group using my HR knowledge."
+            )
+        elif "challenges in data analysis" in prompt.lower():
+            response_text = (
+                "Challenges include handling incomplete or inconsistent data, managing large datasets, and balancing model accuracy with interpretability. I addressed these by employing robust preprocessing, optimizing algorithms, and leveraging cloud resources."
+            )
+        elif "mba in hrm" in prompt.lower():
+            response_text = (
+                "My MBA taught me leadership, organizational behavior, strategic planning, and HR best practices, which complement my technical skills and enhance my ability to lead data-driven initiatives."
+            )
+        elif "advice would you give to aspiring developers" in prompt.lower():
+            response_text = (
+                "My advice: Never stop learning, build a strong foundation in programming, work on real-world projects, and focus on communication skills to articulate technical concepts effectively."
+            )
 
 
 
+        else:
+            response_text = random.choice(
+                [
+                    "That's a great question! Let me think about it.",
+                    "Interesting query! Here's some insight...",
+                    "Can you tell me more about what you're looking for?",
+                ]
+            )
+
+        # Stream the assistant's response
+        with st.chat_message("assistant"):
+            st.write_stream(response_generator(response_text))
+        st.session_state.messages.append({"role": "assistant", "content": response_text})
 
